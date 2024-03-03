@@ -1,100 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style>
-    body {
-      background-color: pink; /* Smooth pink color */
-    }
-  </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Real Love</title>
-    <link href="tictak/default.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="tictak/jquery.js"></script>
-    <script type="text/javascript" src="tictak/garden.js"></script>
-    <script type="text/javascript" src="tictak/functions.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink; /* Smooth pink color */
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        #content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div id="mainDiv">
-        <div id="content">
-            <div id="code" style="margin-top: 112.5px;">
-                <span class="comments">/**</span><br>
-                <span class="space"><span class="comments">*I cant Live Without you dear,</span><br>
-                <span class="space"><span class="comments">*Do You Love me.</span><br>
-                <span class="space"><span class="comments">*i can't.</span><br>
-                <span class="space"><span class="comments">*Really miss u/</span><br>
-                Boy name = <span class="keyword">Mr</span> Adarsh Abraham Johnson<br>
-                Girl name = <span class="keyword">Mrs</span> Linda Francis<br>
-                <span class="comments">// Love U Muthe </span><br>
-                The boy love the girl;<br>
-                <span class="comments">//Linda.</span><br>
-                The girl loved the boy;<br>
-                <span class="comments">//.</span><br>
-                The boy can not be separated from the girl;<br>
-                <span class="comments">// Exactly.</span><br>
-                The girl can not be separated from the boy;<br>
-                <span class="comments">// Not for a Moment</span><br>
-                <span class="comments">// bruhh hug me</span><br>
-                <span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br>
-                <span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br>
-                <span class="placeholder"><span class="comments">// As I sit down to pen these words, my heart races with excitement and anticipation. There's something I've been longing to express, something that has been growing within me like a tender seedling reaching for the sun. Today, I gather all my courage to lay bare the depths of my feelings for you.</span><br>
-                <span class="placeholder"><span class="comments">// Today, I stand before you with a heart overflowing with love and a soul brimming with devotion. I vow to cherish and honor you for all the days of my life, to support you through every triumph and challenge, and to stand by your side as your partner, confidant, and friend.</span><br>
-                <span class="placeholder">The boy has but one dream;<br>
-                <span class="comments">// Stay with me.</span><br>
-                <br>
-                <br>
-                I want to say:<br>
-                Baby, I love you forever;<br>
-            </span></span></span></span></span></span></div>
-            <div id="loveHeart">
-                <canvas id="garden" width="670" height="625"></canvas>
-                <div id="words">
-                    <div id="messages">
-                        We catch our hands since。
-                        <div id="elapseClock"><span class="digit">2400</span> 日 <span class="digit">14</span> 小时 <span class="digit">14</span> 分钟 <span class="digit">14</span> 秒</div>
-                    </div>
-                    <div id="loveu">
-                        My Heart<br>
-                       Linda! <br>
-                        <div class="signature">-Adarsh</div>
+    <video autoplay muted loop id="video-background">
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div id="content">
+        <div id="mainDiv">
+            <div id="content">
+                <div id="code" style="margin-top: 112.5px;">
+                    <span class="comments">/**</span><br>
+                    <span class="space"><span class="comments">*I cant Live Without you dear,</span><br>
+                    <span class="space"><span class="comments">*Do You Love me.</span><br>
+                    <span class="space"><span class="comments">*i can't.</span><br>
+                    <span class="space"><span class="comments">*Really miss u/</span><br>
+                    Boy name = <span class="keyword">Mr</span> Adarsh Abraham Johnson<br>
+                    Girl name = <span class="keyword">Mrs</span> Linda Francis<br>
+                    <span class="comments">// Love U Muthe </span><br>
+                    The boy love the girl;<br>
+                    <span class="comments">//Linda.</span><br>
+                    The girl loved the boy;<br>
+                    <span class="comments">//.</span><br>
+                    The boy can not be separated from the girl;<br>
+                    <span class="comments">// Exactly.</span><br>
+                    The girl can not be separated from the boy;<br>
+                    <span class="comments">// Not for a Moment</span><br>
+                    <span class="comments">// bruhh hug me</span><br>
+                    <span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br>
+                    <span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br>
+                    <span class="placeholder"><span class="comments">// As I sit down to pen these words, my heart races with excitement and anticipation. There's something I've been longing to express, something that has been growing within me like a tender seedling reaching for the sun. Today, I gather all my courage to lay bare the depths of my feelings for you.</span><br>
+                    <span class="placeholder"><span class="comments">// Today, I stand before you with a heart overflowing with love and a soul brimming with devotion. I vow to cherish and honor you for all the days of my life, to support you through every triumph and challenge, and to stand by your side as your partner, confidant, and friend.</span><br>
+                    <span class="placeholder">The boy has but one dream;<br>
+                    <span class="comments">// Stay with me.</span><br>
+                    <br>
+                    <br>
+                    I want to say:<br>
+                    Baby, I love you forever;<br>
+                </span></span></span></span></span></span></div>
+                <div id="loveHeart">
+                    <canvas id="garden" width="670" height="625"></canvas>
+                    <div id="words">
+                        <div id="messages">
+                            We catch our hands since。
+                            <div id="elapseClock"><span class="digit">2400</span> 日 <span class="digit">14</span> 小时 <span class="digit">14</span> 分钟 <span class="digit">14</span> 秒</div>
+                        </div>
+                        <div id="loveu">
+                            My Heart<br>
+                           Linda! <br>
+                            <div class="signature">-Adarsh</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <script type="text/javascript">
-            var offsetX = $("#loveHeart").width() / 2;
-            var offsetY = $("#loveHeart").height() / 2 - 55;
-            var together = new Date();
-            together.setFullYear(2020, 12, 14);
-            together.setHours(20);
-            together.setMinutes(0);
-            together.setSeconds(0);
-            together.setMilliseconds(0);
+            <script type="text/javascript">
+                var offsetX = $("#loveHeart").width() / 2;
+                var offsetY = $("#loveHeart").height() / 2 - 55;
+                var together = new Date();
+                together.setFullYear(2020, 12, 14);
+                together.setHours(20);
+                together.setMinutes(0);
+                together.setSeconds(0);
+                together.setMilliseconds(0);
 
-            if (!document.createElement('canvas').getContext) {
-                var msg = document.createElement("div");
-                msg.id = "errorMsg";
-                msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
-                document.body.appendChild(msg);
-                $("#code").css("display", "none")
-                document.execCommand("stop");
-            } else {
-                setTimeout(function () {
-                    startHeartAnimation();
-                }, 5000);
+                if (!document.createElement('canvas').getContext) {
+                    var msg = document.createElement("div");
+                    msg.id = "errorMsg";
+                    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+                    document.body.appendChild(msg);
+                    $("#code").css("display", "none")
+                    document.execCommand("stop");
+                } else {
+                    setTimeout(function () {
+                        startHeartAnimation();
+                    }, 5000);
 
-                timeElapse(together);
-                setInterval(function () {
                     timeElapse(together);
-                }, 500);
+                    setInterval(function () {
+                        timeElapse(together);
+                    }, 500);
 
-                adjustCodePosition();
-                $("#code").typewriter();
-            }
-        </script>
+                    adjustCodePosition();
+                    $("#code").typewriter();
+                }
+            </script>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
